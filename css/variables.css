@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Varela+Round&display=swap");
+
+:root {
+  --color-primary: rgb(33, 37, 41);
+  --color-secondary: rgb(255, 255, 0);
+  --color-accent: rgb(255, 177, 0);
+  --color-dark: black;
+  --color-light: white;
+  --color-background: var(--color-light);
+  --color-primary-90: rgba(33, 37, 41, 0.9);
+  --color-secondary-10: rgba(255, 255, 0, 0.1);
+  --color-secondary-05: rgba(255, 255, 0, 0.05);
+
+  /***********************************/
+  /* TEXT
+/***********************************/
+  --font-body: 1rem/1.5 "Varela Round", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  --font-headings: "Dosis", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  --color-text: var(--color-dark);
+  --color-link: var(--color-secondary);
+  --color-link-hover: var(--color-primary);
+
+  /***********************************/
+  /* SPACING
+/***********************************/
+
+  --flex-box-width: 100vw * 0.8;
+  --flex-box-padding: 100vw * 0.1;
+  --flex-box-fluid-padding: 0.75rem;
+
+  /***********************************/
+  /* EFFECTS
+/***********************************/
+  --border-color: var(--color-primary);
+  --border: 0.05rem solid var(--border-color);
+
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+  --component-box-shadow: 0 0 0 0.1rem var(--color-primary);
+
+  /***********************************/
+  /* COMPONENTS
+/***********************************/
+  /*************************************/
+  /* NAV
+  /*************************************/
+
+  --nav-background-color: var(--color-primary);
+  --nav-border: 0.01rem solid var(--color-secondary);
+  --nav-box-shadow: var(--component-box-shadow);
+
+  --nav-toggle-color: var(--color-secondary);
+  --nav-toggle-color-hover: var(--color-accent);
+
+  --nav-link-color: var(--color-light);
+  --nav-link-color-hover: var(--color-secondary);
+  /* --nav-link-color-hover-mobile: var(--color-accent); */
+
+  --nav-scrolled-color: var(--color-primary) !important;
+  --nav-scrolled-opacity: 0.9 !important;
+
+  --nav-transition-time: 0.35s;
+
+  /*************************************/
+  /* CARDS
+  /*************************************/
+  --card-background-color: var(--color-light);
+  --card-background-color-hf: rgba(0, 0, 0, 0.03);
+  --card-border: var(--border);
+
+  /*************************************/
+  /* Buttons
+  /*************************************/
+  /* solid */
+  --button-text-color-solid: var(--color-primary);
+  --button-background-color-solid: var(--color-secondary);
+  --button-border-color-solid: var(--color-primary);
+
+  --button-text-color-solid-hover: var(--color-primary);
+  --button-background-color-solid-hover: var(--color-accent);
+  --button-border-color-solid-hover: var(--color-primary);
+
+  /* button shadow */
+  --button-box-shadow: var(--component-box-shadow);
+
+  /*************************************/
+  /* FORMS
+  /*************************************/
+  --form-text-color: var(--color-primary);
+  --form-text: var(--color-primary);
+  --form-text-color-floating: var(--color-primary);
+
+  --form-background-color: var(--color-light);
+  --form-background-color-hover: var(--color-secondary-05);
+  --form-background-color-checked: var(--color-primary);
+
+  --form-border: var(--border);
+  --form-border-color: var(--border-color);
+
+  --form-box-shadow: var(--component-box-shadow);
+  --form-text-shadow: 0 0 0 var(--form-text-color-dark);
+  --form-range-box-shadow: 0 0 0 1px var(--color-light),
+    var(--component-box-shadow);
+}

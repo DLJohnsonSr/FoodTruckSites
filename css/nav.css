@@ -1,0 +1,196 @@
+@import url(./variables.css);
+@import url(./base.css);
+@import url(./utility.css);
+@import url(./buttons.css);
+
+/* Global Nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  min-height: 4rem;
+  background-color: transparent;
+}
+.nav-scrolled {
+  background: var(--nav-scrolled-color) !important;
+  opacity: var(--nav-scrolled-opacity) !important;
+  transition: background var(--nav-transition-time);
+}
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+nav a:hover,
+nav a:focus,
+.nav-link-active {
+  font-weight: bold;
+  color: var(--nav-link-color-hover);
+}
+/* Nav Brand/Title */
+.nav-brand {
+  display: none;
+}
+/* .nav-brand {
+  position: absolute;
+  top: 0.4rem;
+  left: calc(var(--flex-box-padding));
+  color: var(--nav-toggle-color);
+}
+.nav-brand:hover,
+.nav-brand:focus {
+  color: var(--nav-toggle-color-hover);
+  outline: 0;
+} */
+/* Nav Toggle */
+nav input,
+nav label {
+  display: none;
+}
+
+/* Nav List */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+.nav-link {
+  text-align: center;
+  display: inline-block;
+  margin: 0 0.1rem;
+  width: 6rem;
+}
+.nav-link-active {
+  font-style: italic;
+  font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+  nav {
+    overflow: hidden;
+    background-color: var(--nav-background-color);
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  /* Nav Brand/Title */
+  .nav-brand {
+    display: inline;
+    position: absolute;
+    left: calc(var(--flex-box-padding));
+    top: calc(((4rem - (1.375rem + 1.5vw)) / 2) - 0.4rem);
+    color: var(--nav-toggle-color);
+  }
+  .nav-brand:hover,
+  .nav-brand:focus {
+    color: var(--nav-toggle-color-hover);
+    outline: 0;
+  }
+  /* Nav Toggle */
+  nav input,
+  nav label {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.75rem;
+  }
+  nav input {
+    opacity: 0;
+    display: inline-block;
+  }
+  nav label {
+    display: inline;
+    height: 2.6rem;
+    width: 2.5rem;
+    border: 0.25rem solid var(--nav-toggle-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  nav label:hover,
+  nav label:focus {
+    border-color: var(--nav-toggle-color-hover);
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav label:hover > .nav-hash,
+  nav label:focus > .nav-hash {
+    background-color: var(--nav-toggle-color-hover);
+  }
+
+  .nav-hash {
+    position: absolute;
+    width: 1.5rem;
+    height: 0.125rem;
+    background-color: var(--nav-toggle-color);
+    left: 0.25rem;
+    border-radius: 2rem;
+  }
+  .nav-hash-1 {
+    top: 0.4rem;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  .nav-hash-2 {
+    top: 0.95rem;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  .nav-hash-3 {
+    top: 1.5rem;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  /* Nav List */
+  nav ul {
+    padding-top: 4rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 0;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav ul > li {
+    width: inherit;
+  }
+  .nav-link {
+    display: none;
+    width: inherit;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .nav-link,
+  .nav-link:not(:last-of-type) {
+    border-bottom: var(--nav-border);
+  }
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link-active {
+    background-color: var(--nav-link-color-hover-mobile);
+  }
+  /* Nav toggle focus or checked */
+  nav input:focus + label {
+    outline: 0;
+    box-shadow: var(--nav-box-shadow);
+  }
+  nav input:checked + label .nav-hash-1 {
+    top: 0.95rem !important;
+    transform: rotate(45deg);
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav input:checked + label .nav-hash-2 {
+    background-color: transparent !important;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav input:checked + label .nav-hash-3 {
+    top: 0.95rem !important;
+    transform: rotate(-45deg);
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav input:checked ~ ul {
+    height: 19rem;
+    transition: all var(--nav-transition-time) ease-out;
+  }
+  nav input:checked ~ ul > li > a {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav-brand {
+    left: calc(var(--flex-box-fluid-padding));
+  }
+}
